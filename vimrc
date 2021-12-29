@@ -321,7 +321,9 @@ nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 """"""""""""""""""
 
 " 设置颜色主题
-colorscheme desert
+if has('gui')
+	colorscheme seoul256
+endif
 
 " 总是显示行号
 set number
@@ -430,3 +432,11 @@ map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 " 重复上一次操作, 类似repeat插件, 很强大
 map <leader>. <Plug>(easymotion-repeat)
+
+
+"----------------------------------------------------------------------
+" ripgrep
+"----------------------------------------------------------------------
+
+nnoremap <Leader>q :Rg<Space>
+xnoremap <silent> <Leader>q y:Rg <C-R>"<CR>
