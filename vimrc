@@ -327,7 +327,7 @@ colorscheme desert
 set number
 
 " 总是显示侧边栏（用于显示 mark/gitdiff/诊断信息）
-set signcolumn=yes
+" set signcolumn=yes
 
 " 总是显示标签栏
 " set showtabline=2
@@ -416,3 +416,17 @@ set noundofile
 " 创建目录，并且忽略可能出现的警告
 silent! call mkdir(expand('~/.vim/tmp'), "p", 0755)
 
+
+""""""""""""""""""
+" 插件
+""""""""""""""""""
+
+"----------------------------------------------------------------------
+" EasyMontion
+"----------------------------------------------------------------------
+
+let g:EasyMotion_smartcase = 1
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+" 重复上一次操作, 类似repeat插件, 很强大
+map <leader>. <Plug>(easymotion-repeat)
