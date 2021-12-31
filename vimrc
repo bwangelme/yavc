@@ -433,10 +433,17 @@ map <leader>k <Plug>(easymotion-k)
 " 重复上一次操作, 类似repeat插件, 很强大
 map <leader>. <Plug>(easymotion-repeat)
 
-
 "----------------------------------------------------------------------
 " ripgrep
 "----------------------------------------------------------------------
 
 nnoremap <Leader>q :Rg<Space>
 xnoremap <silent> <Leader>q y:Rg <C-R>"<CR>
+
+"----------------------------------------------------------------------
+" vim-commentary
+"----------------------------------------------------------------------
+
+autocmd FileType nginx setlocal commentstring=#\ %s
+autocmd FileType sql setlocal commentstring=--\ %s
+autocmd FileType awk setlocal commentstring=#\ %s
