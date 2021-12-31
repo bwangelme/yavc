@@ -302,6 +302,8 @@ function! ToggleFold()
 endfunction
 nnoremap <F2> :call ToggleFold()<CR>
 
+" F4 换行开关
+nnoremap <F4> :set wrap! wrap?<CR>
 
 " F9 显示可打印字符开关
 nnoremap <F9> :set list! list?<CR>
