@@ -199,7 +199,7 @@ nmap <leader>s :w<CR>
 nnoremap <D-[> <C-O>
 nnoremap <D-]> <C-I>
 
-nmap <leader>l :buffers<CR>
+nmap <leader>l :buffers<CR>:b 
 nmap <leader>m :marks<CR>
 
 " 获取当前位置作为断点
