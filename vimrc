@@ -328,6 +328,8 @@ nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 " 设置颜色主题
 if has('gui')
 	colorscheme seoul256
+else
+	colorscheme zellner
 endif
 
 " 总是显示行号
