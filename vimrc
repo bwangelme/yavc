@@ -495,3 +495,9 @@ xnoremap <silent> <Leader>q y:Rg <C-R>"<CR>
 autocmd FileType nginx setlocal commentstring=#\ %s
 autocmd FileType sql setlocal commentstring=--\ %s
 autocmd FileType awk setlocal commentstring=#\ %s
+
+"----------------------------------------------------------------------
+" vim-rhubarb
+"----------------------------------------------------------------------
+
+let g:github_enterprise_urls = ['https://github.intra.douban.com']
