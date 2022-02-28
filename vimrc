@@ -442,6 +442,18 @@ augroup END
 
 
 "----------------------------------------------------------------------
+" 文件默认模板设置
+"----------------------------------------------------------------------
+autocmd bufnewfile *.c so ~/.vim/templates/c.template
+autocmd bufnewfile *.py so ~/.vim/templates/python.template
+autocmd bufnewfile *.ruby so ~/.vim/templates/ruby.template
+autocmd bufnewfile *.cpp so ~/.vim/templates/cpp.template
+autocmd bufnewfile *.sh so ~/.vim/templates/sh.template
+autocmd bufnewfile *.vim so ~/.vim/templates/vim.template
+autocmd bufnewfile *.go so ~/.vim/templates/go.template
+
+
+"----------------------------------------------------------------------
 " 备份设置
 "----------------------------------------------------------------------
 
