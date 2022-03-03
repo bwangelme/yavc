@@ -450,6 +450,13 @@ autocmd bufnewfile *.sh so ~/.vim/templates/sh.template
 autocmd bufnewfile *.vim so ~/.vim/templates/vim.template
 autocmd bufnewfile *.go so ~/.vim/templates/go.template
 
+"----------------------------------------------------------------------
+" Buffer 自动刷新
+" see explain in https://unix.stackexchange.com/a/383044/191858
+"----------------------------------------------------------------------
+set autoread
+au CursorHold,CursorHoldI * checktime
+
 
 "----------------------------------------------------------------------
 " 备份设置
