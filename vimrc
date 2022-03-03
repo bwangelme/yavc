@@ -430,7 +430,7 @@ set shiftround
 
 augroup PythonTab
     au!
-    au FileType python setlocal shiftwidth=4 tabstop=4 noexpandtab
+    au FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 augroup END
 
 augroup YAMLTab
