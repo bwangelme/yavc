@@ -540,3 +540,13 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"----------------------------------------------------------------------
+" 自动补全单引号，双引号等, delimitMate
+"----------------------------------------------------------------------
+
+" for python docstring ",优化输入
+au FileType python let b:delimitMate_nesting_quotes = ['"']
+au FileType php let delimitMate_matchpairs = "(:),[:],{:}"
+" 关闭某些类型文件的自动补全
+au FileType mail let b:delimitMate_autoclose = 0
