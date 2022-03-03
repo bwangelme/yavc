@@ -528,3 +528,15 @@ autocmd FileType awk setlocal commentstring=#\ %s
 "----------------------------------------------------------------------
 
 let g:github_enterprise_urls = ['https://github.intra.douban.com']
+
+"----------------------------------------------------------------------
+"" 代码片段快速插入, ultisnips
+"----------------------------------------------------------------------
+
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+"" 进入对应filetype的snippets进行编辑
+map <leader>n :UltiSnipsEdit<CR>
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
