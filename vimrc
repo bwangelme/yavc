@@ -323,6 +323,66 @@ set pastetoggle=<F5>
 " F6 语法开关，关闭语法可以加快大文件的展示
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
+"----------------------------------------------------------------------
+" ALT+N 切换 tab
+"----------------------------------------------------------------------
+
+noremap <silent><m-1> :tabn 1<cr>
+noremap <silent><m-2> :tabn 2<cr>
+noremap <silent><m-3> :tabn 3<cr>
+noremap <silent><m-4> :tabn 4<cr>
+noremap <silent><m-5> :tabn 5<cr>
+noremap <silent><m-6> :tabn 6<cr>
+noremap <silent><m-7> :tabn 7<cr>
+noremap <silent><m-8> :tabn 8<cr>
+noremap <silent><m-9> :tabn 9<cr>
+noremap <silent><m-0> :tabn 10<cr>
+inoremap <silent><m-1> <ESC>:tabn 1<cr>
+inoremap <silent><m-2> <ESC>:tabn 2<cr>
+inoremap <silent><m-3> <ESC>:tabn 3<cr>
+inoremap <silent><m-4> <ESC>:tabn 4<cr>
+inoremap <silent><m-5> <ESC>:tabn 5<cr>
+inoremap <silent><m-6> <ESC>:tabn 6<cr>
+inoremap <silent><m-7> <ESC>:tabn 7<cr>
+inoremap <silent><m-8> <ESC>:tabn 8<cr>
+inoremap <silent><m-9> <ESC>:tabn 9<cr>
+inoremap <silent><m-0> <ESC>:tabn 10<cr>
+
+
+"----------------------------------------------------------------------
+" TAB：创建，关闭，上一个，下一个，左移，右移
+" 其实还可以用原生的 CTRL+PageUp, CTRL+PageDown 来切换标签
+"----------------------------------------------------------------------
+
+noremap <silent> <m-t> :tabnew<cr>
+noremap <silent> <m-w> :tabclose<cr>
+" noremap <silent> <m-f> :tabnext<cr>
+" noremap <silent> <m-b> :tabprev<cr>
+noremap <silent> <M-}> :tabnext<cr>
+noremap <silent> <M-{> :tabprev<cr>
+noremap <silent> <m-0> :tabonly<cr>
+
+
+" 左移 tab
+function! Tab_MoveLeft()
+    let l:tabnr = tabpagenr() - 2
+    if l:tabnr >= 0
+        exec 'tabmove '.l:tabnr
+    endif
+endfunc
+
+" 右移 tab
+function! Tab_MoveRight()
+    let l:tabnr = tabpagenr() + 1
+    if l:tabnr <= tabpagenr('$')
+        exec 'tabmove '.l:tabnr
+    endif
+endfunc
+
+noremap <silent><leader>tl :call Tab_MoveLeft()<cr>
+noremap <silent><leader>tr :call Tab_MoveRight()<cr>
+noremap <silent><m-left> :call Tab_MoveLeft()<cr>
+noremap <silent><m-right> :call Tab_MoveRight()<cr>
 
 """"""""""""""""""
 " GUI 设置
