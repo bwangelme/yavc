@@ -259,15 +259,14 @@ inoremap <C-l> <right>
 " 命令模式的按键映射
 "----------------------------------------------------------------------
 cnoremap <c-h> <left>
-cnoremap <c-j> <down>
-cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
-cnoremap <c-f> <c-d>
+cnoremap <c-f> <right>
 cnoremap <c-b> <left>
 cnoremap <c-d> <del>
-cnoremap <c-_> <c-k>
+" ctrl-k 删除光标下文本到行尾
+cnoremap <C-k> <C-\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>
 " ctrl-n, ctrl-p 只能搜索历史命令
 cnoremap <c-n> <down>
 cnoremap <c-p> <up>
@@ -394,6 +393,9 @@ if has('gui')
 else
 	colorscheme zellner
 endif
+
+" 设置字体
+set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 16
 
 " 总是显示行号
 set number
