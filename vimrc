@@ -395,7 +395,7 @@ else
 endif
 
 " 设置字体
-set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 16
+set guifont=DejaVuSansMono\ Nerd\ Font\ Mono\ 14
 
 " 总是显示行号
 set number
